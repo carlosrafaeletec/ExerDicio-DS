@@ -1,5 +1,5 @@
-
 from bib import *
+import os
 '''
 tabela = list()
 # forma 1
@@ -42,11 +42,11 @@ while True:
     print("""
         0 - Sair
         1 - Cadastrar 
-        2 - Listar
-        3 - Cadastrar multiplos (até que seja digitado.)
-        4 - Exibir um específico
+        2 - Listar um especifico
+        3 - Listar Todos
+        4 - Exibir a posição da key
         5 - Consultar por nome (ou outra chave unica)
-        6 - Cadastrar consultando
+        6 - Consultar cadastro
         7 - Editar 
         8 - Excluir
     """)
@@ -57,30 +57,30 @@ while True:
             PreencherTable(dicio, table)
 
         case 2:
-            kei = int(input("\n Digite qual key deseja ver: "))
+            kei = int(input("\nDigite qual key deseja ver: "))
             exibRegis(table, kei)
 
         case 3:
             exibTudo(table)
 
         case 4:
-            ind = int(input("\n Posição: "))
+            ind = int(input("\nPosição: "))
             exibir_posicao(table, ind)
         
         case 5:
-            name = input("\n Digite seu nome: ")
+            name = input("\nDigite seu nome: ")
             consultNome(table, name)
         
         case 6:
-            name = input("\n Nome: ")
+            name = input("\nNome: ")
             consultado(table, name, dicio)
 
         case 7:
-            id = input("Cpf: ")
+            id = input("Digite seu nome para editar o registro: ")
             editar(table, id)
 
         case 8:
-            id = input("CPF: ")
+            id = input("Digite o nome para excluir o registro: ")
             excluir(table, id)
 
         case 0:
